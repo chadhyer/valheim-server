@@ -67,6 +67,7 @@ if [ -z "${uid}" ];then uid="${USERID:-1000}";fi
 if [ -z "${gid}" ];then gid="${GROUPID:-$uid}";fi
 if [ -z "${port}" ];then port_a=2456;fi
 port_b=$(($port_a+1))
+port_c=$(($port_a+2))
 if [ -z "${volume}" ];then volume='valheim-world';fi
 
 
@@ -78,6 +79,7 @@ docker run --name ${name} \
     --user "${uid}:${gid}" \
     -p 2456:${port_a}/udp \
     -p 2457:${port_b}/udp \
+    -p 2458:${port_c}/udp \
     -v $volume:/home/steam/.config/unity3d/IronGate/Valheim \
     --env-file ${envfile} ${extras} \
     ${image}:${tag}
