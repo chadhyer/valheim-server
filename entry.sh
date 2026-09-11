@@ -28,19 +28,19 @@ if [ -n "${VALHEIM_PRESET}" ];then
     extras="${extras} -preset ${VALHEIM_PRESET}"
 fi
 if [ -n "${VALHEIM_COMBAT}" ];then
-    extras="${extras} -preset ${VALHEIM_COMBAT}"
+    extras="${extras} -modifier combat ${VALHEIM_COMBAT}"
 fi
 if [ -n "${VALHEIM_DEATHPENALTY}" ];then
-    extras="${extras} -preset ${VALHEIM_DEATHPENALTY}"
+    extras="${extras} -modifier deathpenalty ${VALHEIM_DEATHPENALTY}"
 fi
 if [ -n "${VALHEIM_RESOURCES}" ];then
-    extras="${extras} -preset ${VALHEIM_RESOURCES}"
+    extras="${extras} -modifier resources ${VALHEIM_RESOURCES}"
 fi
 if [ -n "${VALHEIM_RAIDS}" ];then
-    extras="${extras} -preset ${VALHEIM_RAIDS}"
+    extras="${extras} -modifier raids ${VALHEIM_RAIDS}"
 fi
 if [ -n "${VALHEIM_PORTALS}" ];then
-    extras="${extras} -preset ${VALHEIM_PORTALS}"
+    extras="${extras} -modifier portals ${VALHEIM_PORTALS}"
 fi
 
 # Update
